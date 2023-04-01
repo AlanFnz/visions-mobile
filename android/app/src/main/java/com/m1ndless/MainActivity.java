@@ -1,4 +1,4 @@
-package com.m1ndless;
+package com.mysterypulse.m1ndless;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

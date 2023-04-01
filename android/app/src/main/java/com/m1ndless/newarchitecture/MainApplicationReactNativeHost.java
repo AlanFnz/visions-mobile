@@ -1,4 +1,4 @@
-package com.m1ndless.newarchitecture;
+package com.mysterypulse.m1ndless.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.m1ndless.BuildConfig;
-import com.m1ndless.newarchitecture.components.MainComponentsRegistry;
-import com.m1ndless.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.mysterypulse.m1ndless.BuildConfig;
+import com.mysterypulse.m1ndless.newarchitecture.components.MainComponentsRegistry;
+import com.mysterypulse.m1ndless.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

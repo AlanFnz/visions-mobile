@@ -1,4 +1,4 @@
-package com.m1ndless.newarchitecture.modules;
+package com.mysterypulse.m1ndless.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

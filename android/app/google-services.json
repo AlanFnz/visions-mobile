@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "203163730818",
+    "project_id": "m1ndless",
+    "storage_bucket": "m1ndless.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203163730818:android:6581d47ce4b94cd833059b",
+        "android_client_info": {
+          "package_name": "com.mysterypulse.m1ndless"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "203163730818-ngoleoslmqnipuk1udo14bt8415sigt1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwFQ4v52Uc_0lJhYe5Y2QFColXCS7g4Fs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "203163730818-ngoleoslmqnipuk1udo14bt8415sigt1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
