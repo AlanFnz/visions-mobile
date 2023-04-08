@@ -4,6 +4,9 @@ import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
 
+import android.os.Bundle;
+import org.devio.rn.splashscreen.SplashScreen;
+
 public class MainActivity extends ReactActivity {
 
   /**
@@ -13,6 +16,12 @@ public class MainActivity extends ReactActivity {
   @Override
   protected String getMainComponentName() {
     return "m1ndless";
+  }
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+      SplashScreen.show(this); // Add this line to display the splash screen
+      super.onCreate(savedInstanceState);
   }
 
   /**
