@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, StyleSheet, TextInput, Button } from 'react-native';
 import { useForm, Controller } from 'react-hook-form';
 
-const Signup = () => {
+const Login = () => {
   const {
     register,
     setValue,
@@ -47,23 +47,9 @@ const Signup = () => {
           name="password"
           rules={{ required: true }}
         />
-        <Text style={styles.label}>Confirm password</Text>
-        <Controller
-          control={control}
-          render={({ field: { onChange, onBlur, value } }) => (
-            <TextInput
-              style={styles.input}
-              onBlur={onBlur}
-              onChangeText={(value) => onChange(value)}
-              value={value}
-            />
-          )}
-          name="confirmPassword"
-          rules={{ required: true }}
-        />
       </View>
       <View style={styles.button}>
-        <Button title="Create account" onPress={handleSubmit(onSubmit)} />
+        <Button title="Login" onPress={handleSubmit(onSubmit)} />
       </View>
     </View>
   );
@@ -105,4 +91,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Signup;
+export default Login;
