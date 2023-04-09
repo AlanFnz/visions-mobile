@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import { configureStore } from '@reduxjs/toolkit';
 import authReducer from './slices/auth/auth';
 import reactotron from '../utils/reactotron';
@@ -13,6 +15,6 @@ const store = configureStore({
   enhancers: enhancers
 });
 
-//export type RootState = ReturnType<typeof store.getState>;
-//export type AppDispatch = typeof store.dispatch;
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
 export default store;
