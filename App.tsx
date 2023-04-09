@@ -1,8 +1,14 @@
 import React, { useEffect } from 'react';
 import { Text, View } from 'react-native';
-import SplashScreen from 'react-native-splash-screen';
 import { Provider } from 'react-redux';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import SplashScreen from 'react-native-splash-screen';
 import store from './state/store';
+import Signup from './screens/Signup';
+import Login from './screens/Login';
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   const isLoggedIn = store.getState().auth.isLoggedIn;
@@ -13,29 +19,27 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      {isLoggedIn ? (
-        <View
-          style={{
-            flex: 1,
-            backgroundColor: '#fff',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}
-        >
-          <Text>Authorized</Text>
-        </View>
-      ) : (
-        <View
-          style={{
-            flex: 1,
-            backgroundColor: '#fff',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}
-        >
-          <Text>Unauthorized</Text>
-        </View>
-      )}
+      <NavigationContainer>
+        <Stack.Navigator>
+          {isLoggedIn ? (
+            <View
+              style={{
+                flex: 1,
+                backgroundColor: '#fff',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
+              <Text>Home</Text>
+            </View>
+          ) : (
+            <>
+              <Stack.Screen name="Login" component={Login} />
+              <Stack.Screen name="Sign up" component={Signup} />
+            </>
+          )}
+        </Stack.Navigator>
+      </NavigationContainer>
     </Provider>
   );
 };
