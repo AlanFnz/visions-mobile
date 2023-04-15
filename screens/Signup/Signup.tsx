@@ -25,6 +25,12 @@ const Signup = ({ navigation }) => {
 
   const onSubmit = (data: any) => firebaseAuth(data.email, data.password);
 
+  /**
+   * TODO: 
+   * 1. refactor input components
+   * 2. styles to styled components
+   * 3. validations
+   */
   return (
     <View style={styles.container}>
       <View style={styles.formContainer}>

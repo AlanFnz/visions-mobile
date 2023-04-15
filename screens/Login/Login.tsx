@@ -24,6 +24,13 @@ const Login = ({ navigation }) => {
 
   const onSubmit = (data: any) => reactotron.log(data);
 
+  /**
+   * TODO:
+   * 1. refactor input components
+   * 2. styles to styled components
+   * 3. validations
+   * 4. implement basic login with firebase
+   */
   return (
     <View style={styles.container}>
       <View style={styles.formContainer}>

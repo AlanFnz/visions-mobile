@@ -1,5 +1,11 @@
 import auth from '@react-native-firebase/auth';
 
+/**
+ * @param email
+ * @param password
+ * @description handles user firebase user creation w/ email and password
+ * //TODO: error handling
+ */
 const firebaseAuth = (email: string, password: string) =>
   auth()
     .createUserWithEmailAndPassword(email, password)
