@@ -1,10 +1,15 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import store from '../../state/store';
+import { logoutAction } from '../../state/slices/auth/auth';
 
 const Home = () => {
   return (
     <View style={styles.container}>
-      <Text>Home</Text>
+      {/* FIXME: adding logout action for development purposes */}
+      <TouchableOpacity onPress={() => store.dispatch(logoutAction())}>
+        <Text>Home</Text>
+      </TouchableOpacity>
     </View>
   );
 };

@@ -8,6 +8,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 import { useForm, Controller } from 'react-hook-form';
+import { firebaseAuth } from '../../api/firebase';
 
 const Signup = ({ navigation }) => {
   const {
@@ -22,9 +23,7 @@ const Signup = ({ navigation }) => {
     }
   });
 
-  const onSubmit = (data: any) => console.log(data);
-
-  const onError = (errors: any) => console.log(errors);
+  const onSubmit = (data: any) => firebaseAuth(data.email, data.password);
 
   return (
     <View style={styles.container}>
