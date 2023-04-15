@@ -45,7 +45,17 @@ const App = () => {
                   headerTintColor: '#fff'
                 }}
               />
-              <Stack.Screen name="Sign up" component={Signup} />
+              <Stack.Screen
+                name="Signup"
+                component={Signup}
+                options={{
+                  title: '',
+                  headerStyle: {
+                    backgroundColor: '#111111'
+                  },
+                  headerTintColor: '#fff'
+                }}
+              />
             </>
           )}
         </Stack.Navigator>

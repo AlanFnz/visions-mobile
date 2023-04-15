@@ -1,9 +1,16 @@
 import React from 'react';
-import { Text, View, StyleSheet, TextInput, Button } from 'react-native';
+import {
+  Text,
+  View,
+  StyleSheet,
+  TextInput,
+  Button,
+  TouchableOpacity
+} from 'react-native';
 import { useForm, Controller } from 'react-hook-form';
 import reactotron from 'reactotron-react-native';
 
-const Login = () => {
+const Login = ({ navigation }) => {
   const {
     control,
     handleSubmit,
@@ -59,6 +66,10 @@ const Login = () => {
       <View style={styles.button}>
         <Button title="Login" onPress={handleSubmit(onSubmit)} />
       </View>
+
+      <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
+        <Text style={{ color: 'white', top: 15 }}>Create account</Text>
+      </TouchableOpacity>
     </View>
   );
 };

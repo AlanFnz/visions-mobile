@@ -1,8 +1,15 @@
 import React from 'react';
-import { Text, View, StyleSheet, TextInput, Button } from 'react-native';
+import {
+  Text,
+  View,
+  StyleSheet,
+  TextInput,
+  Button,
+  TouchableOpacity
+} from 'react-native';
 import { useForm, Controller } from 'react-hook-form';
 
-const Signup = () => {
+const Signup = ({ navigation }) => {
   const {
     register,
     setValue,
@@ -24,6 +31,7 @@ const Signup = () => {
           control={control}
           render={({ field: { onChange, onBlur, value } }) => (
             <TextInput
+              autoCapitalize="none"
               style={styles.input}
               onBlur={onBlur}
               onChangeText={(value) => onChange(value)}
@@ -38,6 +46,8 @@ const Signup = () => {
           control={control}
           render={({ field: { onChange, onBlur, value } }) => (
             <TextInput
+              autoCapitalize="none"
+              secureTextEntry={true}
               style={styles.input}
               onBlur={onBlur}
               onChangeText={(value) => onChange(value)}
@@ -52,6 +62,8 @@ const Signup = () => {
           control={control}
           render={({ field: { onChange, onBlur, value } }) => (
             <TextInput
+              autoCapitalize="none"
+              secureTextEntry={true}
               style={styles.input}
               onBlur={onBlur}
               onChangeText={(value) => onChange(value)}
@@ -65,6 +77,10 @@ const Signup = () => {
       <View style={styles.button}>
         <Button title="Create account" onPress={handleSubmit(onSubmit)} />
       </View>
+
+      <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+        <Text style={{ color: 'white', top: 15 }}>Already have an account</Text>
+      </TouchableOpacity>
     </View>
   );
 };
