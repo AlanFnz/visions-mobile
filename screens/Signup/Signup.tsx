@@ -11,13 +11,16 @@ import { useForm, Controller } from 'react-hook-form';
 
 const Signup = ({ navigation }) => {
   const {
-    register,
-    setValue,
-    handleSubmit,
     control,
-    reset,
+    handleSubmit,
     formState: { errors }
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      email: '',
+      password: '',
+      confirmPassword: ''
+    }
+  });
 
   const onSubmit = (data: any) => console.log(data);
 
