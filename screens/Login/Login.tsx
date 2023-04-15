@@ -1,20 +1,21 @@
 import React from 'react';
 import { Text, View, StyleSheet, TextInput, Button } from 'react-native';
 import { useForm, Controller } from 'react-hook-form';
+import reactotron from 'reactotron-react-native';
 
 const Login = () => {
   const {
-    register,
-    setValue,
-    handleSubmit,
     control,
-    reset,
+    handleSubmit,
     formState: { errors }
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      email: '',
+      password: ''
+    }
+  });
 
-  const onSubmit = (data: any) => console.log(data);
-
-  const onError = (errors: any) => console.log(errors);
+  const onSubmit = (data: any) => reactotron.log(data);
 
   return (
     <View style={styles.container}>
@@ -28,16 +29,20 @@ const Login = () => {
               onBlur={onBlur}
               onChangeText={(value) => onChange(value)}
               value={value}
+              autoCapitalize="none"
             />
           )}
           name="email"
           rules={{ required: true }}
         />
+        {errors.email && <Text style={{ color: 'red' }}>Email error</Text>}
+
         <Text style={styles.label}>Password</Text>
         <Controller
           control={control}
           render={({ field: { onChange, onBlur, value } }) => (
             <TextInput
+              secureTextEntry={true}
               style={styles.input}
               onBlur={onBlur}
               onChangeText={(value) => onChange(value)}
@@ -47,6 +52,9 @@ const Login = () => {
           name="password"
           rules={{ required: true }}
         />
+        {errors.password && (
+          <Text style={{ color: 'red' }}>Password error</Text>
+        )}
       </View>
       <View style={styles.button}>
         <Button title="Login" onPress={handleSubmit(onSubmit)} />
@@ -63,7 +71,7 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop: 40,
-    color: 'white',
+    color: 'black',
     height: 40,
     backgroundColor: '#fffffe',
     borderRadius: 4

@@ -34,7 +34,17 @@ const App = () => {
             </View>
           ) : (
             <>
-              <Stack.Screen name="Login" component={Login} />
+              <Stack.Screen
+                name="Login"
+                component={Login}
+                options={{
+                  title: 'Welcome',
+                  headerStyle: {
+                    backgroundColor: '#111111'
+                  },
+                  headerTintColor: '#fff'
+                }}
+              />
               <Stack.Screen name="Sign up" component={Signup} />
             </>
           )}
