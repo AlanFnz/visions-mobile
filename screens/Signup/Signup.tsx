@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import { useForm, Controller } from 'react-hook-form';
 import { firebaseCreateWithEmailAndPassword } from '../../api/firebase';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const Signup = ({ navigation }) => {
   const {
@@ -32,7 +33,7 @@ const Signup = ({ navigation }) => {
    * 3. validations
    */
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.formContainer}>
         <Text style={styles.label}>Email</Text>
         <Controller
@@ -89,7 +90,7 @@ const Signup = ({ navigation }) => {
       <TouchableOpacity onPress={() => navigation.navigate('Login')}>
         <Text style={{ color: 'white', top: 15 }}>Already have an account</Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 };
 

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import SplashScreen from 'react-native-splash-screen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';
@@ -17,10 +16,6 @@ const Stack = createNativeStackNavigator();
 const App = () => {
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
   const [initializing, setInitializing] = useState(true);
-
-  useEffect(() => {
-    SplashScreen.hide();
-  }, []);
 
   useEffect(() => {
     const subscriber = auth().onAuthStateChanged(onAuthStateChanged);

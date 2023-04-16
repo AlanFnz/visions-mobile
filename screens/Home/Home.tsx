@@ -1,12 +1,13 @@
 import React from 'react';
-import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import store from '../../state/store';
 import { logoutAction } from '../../state/slices/auth/auth';
 import { firebaseSignOut } from '../../api/firebase';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const Home = () => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       {/* FIXME: adding logout action for development purposes */}
       <TouchableOpacity
         onPress={() => {
@@ -16,7 +17,7 @@ const Home = () => {
       >
         <Text>Home</Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 };
 
