@@ -8,7 +8,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 import { useForm, Controller } from 'react-hook-form';
-import reactotron from 'reactotron-react-native';
+import { firebaseSignInWithEmailAndPassword } from '../../api/firebase';
 
 const Login = ({ navigation }) => {
   const {
@@ -22,14 +22,14 @@ const Login = ({ navigation }) => {
     }
   });
 
-  const onSubmit = (data: any) => reactotron.log(data);
+  const onSubmit = (data: any) =>
+    firebaseSignInWithEmailAndPassword(data.email, data.password);
 
   /**
    * TODO:
    * 1. refactor input components
    * 2. styles to styled components
    * 3. validations
-   * 4. implement basic login with firebase
    */
   return (
     <View style={styles.container}>

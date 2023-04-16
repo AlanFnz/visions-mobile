@@ -5,8 +5,9 @@ import auth from '@react-native-firebase/auth';
  * @param password
  * @description handles user firebase user creation w/ email and password
  * //TODO: error handling
+ *         remove console logs
  */
-const firebaseAuth = (email: string, password: string) =>
+const firebaseCreateWithEmailAndPassword = (email: string, password: string) =>
   auth()
     .createUserWithEmailAndPassword(email, password)
     .then((data) => {
@@ -24,4 +25,23 @@ const firebaseAuth = (email: string, password: string) =>
       console.error(error);
     });
 
-export { firebaseAuth };
+const firebaseSignInWithEmailAndPassword = (email: string, password: string) =>
+  auth()
+    .signInWithEmailAndPassword(email, password)
+    .then((data) => {
+      console.log('User signed in!', data);
+    })
+    .catch((error: { code: string }) => {
+      console.error(error);
+    });
+
+const firebaseSignOut = () =>
+  auth()
+    .signOut()
+    .then(() => console.log('User signed out!'));
+
+export {
+  firebaseCreateWithEmailAndPassword,
+  firebaseSignInWithEmailAndPassword,
+  firebaseSignOut
+};
