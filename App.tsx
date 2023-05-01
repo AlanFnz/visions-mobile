@@ -1,17 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';
 
+import Home from './screens/Home';
 import Signup from './screens/Signup';
 import Login from './screens/Login';
+import Settings from './screens/Settings';
 
 import { loginAction, logoutAction } from './state/slices/auth/auth';
-import store, { RootState } from './state/store';
-import Home from './screens/Home';
 import { useSelector } from 'react-redux';
+import store, { RootState } from './state/store';
 
 const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
+
+const TabNavigator = () => (
+  <Tab.Navigator screenOptions={{ headerTitle: '' }}>
+    <Tab.Screen
+      name={'DropList'}
+      component={Home}
+      options={{ tabBarLabel: 'Drops' }}
+    />
+    <Tab.Screen
+      name={'Settings'}
+      component={Settings}
+      options={{ tabBarLabel: 'Settings' }}
+    />
+  </Tab.Navigator>
+);
 
 const App = () => {
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
@@ -39,13 +57,9 @@ const App = () => {
         {isLoggedIn ? (
           <Stack.Screen
             name="Home"
-            component={Home}
+            component={TabNavigator}
             options={{
-              title: '',
-              headerStyle: {
-                backgroundColor: '#111111'
-              },
-              headerTintColor: '#fff'
+              headerShown: false
             }}
           />
         ) : (
