@@ -7,16 +7,17 @@ import Login from './feature/Login';
 import TabNavigator from './components/TabNavigator';
 
 import { checkUserAuthentication } from './state/slices/auth/auth';
-import { useSelector } from 'react-redux';
-import store, { RootState } from './state/store';
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from './state/store';
 
 const Stack = createNativeStackNavigator();
 
 const App: React.FC = () => {
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
+  const dispatch = useDispatch<AppDispatch>();
 
   useEffect(() => {
-    store.dispatch(checkUserAuthentication());
+    dispatch(checkUserAuthentication());
   }, []);
 
   return (
