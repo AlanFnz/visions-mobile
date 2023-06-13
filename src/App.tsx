@@ -20,6 +20,10 @@ const App: React.FC = () => {
     dispatch(checkUserAuthentication());
   }, []);
 
+  /**
+   * TODO: move styles style sheets and constants
+   */
+
   return (
     <NavigationContainer>
       <Stack.Navigator>
