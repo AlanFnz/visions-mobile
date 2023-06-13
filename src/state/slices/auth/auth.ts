@@ -1,4 +1,5 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import auth from '@react-native-firebase/auth';
 
 interface User {
   uid: string;
@@ -14,6 +15,20 @@ const initialState: AuthState = {
   isLoggedIn: false,
   user: null
 };
+
+export const checkUserAuthentication = createAsyncThunk(
+  'auth/checkUserAuthentication',
+  async (_, { dispatch }) => {
+    auth().onAuthStateChanged((user) => {
+      if (user) {
+        const userData = { uid: user.uid, email: user.email };
+        dispatch(loginAction(userData));
+      } else {
+        dispatch(logoutAction());
+      }
+    });
+  }
+);
 
 const authSlice = createSlice({
   name: 'auth',
