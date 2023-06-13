@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import store from '../../state/store';
 import { logoutAction } from '../../state/slices/auth/auth';
-import { firebaseSignOut } from '../../api/firebase';
+import { firebaseSignOut } from '../../services/firebase';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const Home = () => {

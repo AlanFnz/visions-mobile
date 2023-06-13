@@ -8,7 +8,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 import { useForm, Controller } from 'react-hook-form';
-import { firebaseSignInWithEmailAndPassword } from '../../api/firebase';
+import { firebaseSignInWithEmailAndPassword } from '../../services/firebase';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const Login = ({ navigation }) => {

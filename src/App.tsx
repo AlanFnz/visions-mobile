@@ -4,10 +4,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';
 
-import Home from './screens/Home';
-import Signup from './screens/Signup';
-import Login from './screens/Login';
-import Settings from './screens/Settings';
+import Home from './feature/Home';
+import Signup from './feature/Signup';
+import Login from './feature/Login';
+import Settings from './feature/Settings';
 
 import { loginAction, logoutAction } from './state/slices/auth/auth';
 import { useSelector } from 'react-redux';
