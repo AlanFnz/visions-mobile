@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react';
+import { View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from 'react-redux';
 import SplashScreen from 'react-native-splash-screen';
@@ -16,9 +17,11 @@ const AppWrapper = () => {
   }, [isAppLoaded]);
 
   return (
-    <SafeAreaProvider onLayout={onLayout}>
+    <SafeAreaProvider>
       <Provider store={store}>
-        <App />
+        <View onLayout={onLayout} style={{ flex: 1 }}>
+          <App />
+        </View>
       </Provider>
     </SafeAreaProvider>
   );
