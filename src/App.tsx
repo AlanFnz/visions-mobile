@@ -12,7 +12,7 @@ import store, { RootState } from './state/store';
 
 const Stack = createNativeStackNavigator();
 
-const App = () => {
+const App: React.FC = () => {
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
 
   useEffect(() => {
