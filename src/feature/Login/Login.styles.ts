@@ -18,6 +18,7 @@ export const Label = styled.Text`
   color: white;
   margin: 20px;
   margin-left: 0;
+  margin-bottom: 5px;
 `;
 
 export const ErrorText = styled.Text`
