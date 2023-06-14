@@ -12,6 +12,7 @@ import { firebaseCreateWithEmailAndPassword } from '../../services/firebase';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { AuthStackParamList } from '../../types/navigation';
+import InputField from '../../components/InputField';
 
 type LoginScreenNavigationProp = NativeStackNavigationProp<
   AuthStackParamList,
@@ -20,6 +21,12 @@ type LoginScreenNavigationProp = NativeStackNavigationProp<
 
 interface SignupProps {
   navigation: LoginScreenNavigationProp;
+}
+
+interface FormData {
+  email: string;
+  password: string;
+  confirmPassword: string;
 }
 
 const Signup: React.FC<SignupProps> = ({ navigation }) => {
@@ -35,12 +42,11 @@ const Signup: React.FC<SignupProps> = ({ navigation }) => {
     }
   });
 
-  const onSubmit = (data: any) =>
+  const onSubmit = (data: FormData) =>
     firebaseCreateWithEmailAndPassword(data.email, data.password);
 
   /**
    * TODO:
-   * 1. refactor input components
    * 2. styles to styled components
    * 3. validations
    */
@@ -48,50 +54,26 @@ const Signup: React.FC<SignupProps> = ({ navigation }) => {
     <SafeAreaView style={styles.container}>
       <View style={styles.formContainer}>
         <Text style={styles.label}>Email</Text>
-        <Controller
+        <InputField
           control={control}
-          render={({ field: { onChange, onBlur, value } }) => (
-            <TextInput
-              autoCapitalize="none"
-              style={styles.input}
-              onBlur={onBlur}
-              onChangeText={(value) => onChange(value)}
-              value={value}
-            />
-          )}
           name="email"
+          autoCapitalize="none"
           rules={{ required: true }}
         />
         <Text style={styles.label}>Password</Text>
-        <Controller
+        <InputField
           control={control}
-          render={({ field: { onChange, onBlur, value } }) => (
-            <TextInput
-              autoCapitalize="none"
-              secureTextEntry={true}
-              style={styles.input}
-              onBlur={onBlur}
-              onChangeText={(value) => onChange(value)}
-              value={value}
-            />
-          )}
           name="password"
+          autoCapitalize="none"
+          secureTextEntry
           rules={{ required: true }}
         />
         <Text style={styles.label}>Confirm password</Text>
-        <Controller
+        <InputField
           control={control}
-          render={({ field: { onChange, onBlur, value } }) => (
-            <TextInput
-              autoCapitalize="none"
-              secureTextEntry={true}
-              style={styles.input}
-              onBlur={onBlur}
-              onChangeText={(value) => onChange(value)}
-              value={value}
-            />
-          )}
           name="confirmPassword"
+          autoCapitalize="none"
+          secureTextEntry
           rules={{ required: true }}
         />
       </View>

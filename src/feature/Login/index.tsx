@@ -12,6 +12,7 @@ import { firebaseSignInWithEmailAndPassword } from '../../services/firebase';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { AuthStackParamList } from '../../types/navigation';
+import InputField from '../../components/InputField';
 
 type LoginScreenNavigationProp = NativeStackNavigationProp<
   AuthStackParamList,
@@ -20,6 +21,11 @@ type LoginScreenNavigationProp = NativeStackNavigationProp<
 
 interface LoginProps {
   navigation: LoginScreenNavigationProp;
+}
+
+interface FormData {
+  email: string;
+  password: string;
 }
 
 const Login: React.FC<LoginProps> = ({ navigation }) => {
@@ -34,7 +40,7 @@ const Login: React.FC<LoginProps> = ({ navigation }) => {
     }
   });
 
-  const onSubmit = (data: any) =>
+  const onSubmit = (data: FormData) =>
     firebaseSignInWithEmailAndPassword(data.email, data.password);
 
   /**
@@ -47,36 +53,20 @@ const Login: React.FC<LoginProps> = ({ navigation }) => {
     <SafeAreaView style={styles.container}>
       <View style={styles.formContainer}>
         <Text style={styles.label}>Email</Text>
-        <Controller
+        <InputField
           control={control}
-          render={({ field: { onChange, onBlur, value } }) => (
-            <TextInput
-              style={styles.input}
-              onBlur={onBlur}
-              onChangeText={(value) => onChange(value)}
-              value={value}
-              autoCapitalize="none"
-            />
-          )}
           name="email"
           rules={{ required: true }}
+          autoCapitalize="none"
         />
         {errors.email && <Text style={{ color: 'red' }}>Email error</Text>}
 
         <Text style={styles.label}>Password</Text>
-        <Controller
+        <InputField
           control={control}
-          render={({ field: { onChange, onBlur, value } }) => (
-            <TextInput
-              secureTextEntry={true}
-              style={styles.input}
-              onBlur={onBlur}
-              onChangeText={(value) => onChange(value)}
-              value={value}
-            />
-          )}
           name="password"
           rules={{ required: true }}
+          secureTextEntry
         />
         {errors.password && (
           <Text style={{ color: 'red' }}>Password error</Text>
