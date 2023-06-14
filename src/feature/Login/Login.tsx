@@ -10,8 +10,19 @@ import {
 import { useForm, Controller } from 'react-hook-form';
 import { firebaseSignInWithEmailAndPassword } from '../../services/firebase';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { AuthStackParamList } from '../../types/navigation';
 
-const Login = ({ navigation }) => {
+type LoginScreenNavigationProp = NativeStackNavigationProp<
+  AuthStackParamList,
+  'Login'
+>;
+
+interface LoginProps {
+  navigation: LoginScreenNavigationProp;
+}
+
+const Login: React.FC<LoginProps> = ({ navigation }) => {
   const {
     control,
     handleSubmit,

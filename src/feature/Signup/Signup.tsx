@@ -10,8 +10,19 @@ import {
 import { useForm, Controller } from 'react-hook-form';
 import { firebaseCreateWithEmailAndPassword } from '../../services/firebase';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { AuthStackParamList } from '../../types/navigation';
 
-const Signup = ({ navigation }) => {
+type LoginScreenNavigationProp = NativeStackNavigationProp<
+  AuthStackParamList,
+  'Signup'
+>;
+
+interface SignupProps {
+  navigation: LoginScreenNavigationProp;
+}
+
+const Signup: React.FC<SignupProps> = ({ navigation }) => {
   const {
     control,
     handleSubmit,
@@ -24,10 +35,11 @@ const Signup = ({ navigation }) => {
     }
   });
 
-  const onSubmit = (data: any) => firebaseCreateWithEmailAndPassword(data.email, data.password);
+  const onSubmit = (data: any) =>
+    firebaseCreateWithEmailAndPassword(data.email, data.password);
 
   /**
-   * TODO: 
+   * TODO:
    * 1. refactor input components
    * 2. styles to styled components
    * 3. validations
