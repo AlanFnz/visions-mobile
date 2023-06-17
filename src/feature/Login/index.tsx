@@ -12,6 +12,7 @@ import {
   StyledButton
 } from './Login.styles';
 import { LoginProps, FormData } from './Login.types';
+import { emailValidation, passwordValidation } from './Login.validations';
 
 const Login: React.FC<LoginProps> = ({ navigation }) => {
   const {
@@ -35,7 +36,7 @@ const Login: React.FC<LoginProps> = ({ navigation }) => {
         <InputField
           control={control}
           name="email"
-          rules={{ required: true }}
+          rules={emailValidation}
           autoCapitalize="none"
         />
         {errors.email && <ErrorText>Email error</ErrorText>}
@@ -44,7 +45,7 @@ const Login: React.FC<LoginProps> = ({ navigation }) => {
         <InputField
           control={control}
           name="password"
-          rules={{ required: true }}
+          rules={passwordValidation}
           secureTextEntry
         />
         {errors.password && <ErrorText>Password error</ErrorText>}

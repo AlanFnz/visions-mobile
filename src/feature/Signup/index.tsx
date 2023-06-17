@@ -11,12 +11,18 @@ import {
   BottomText
 } from './Signup.styles';
 import { SignupProps, FormData } from './Signup.types';
+import {
+  confirmPasswordValidation,
+  emailValidation,
+  passwordValidation
+} from './Signup.validations';
 
 const Signup: React.FC<SignupProps> = ({ navigation }) => {
   const {
     control,
     handleSubmit,
-    formState: { errors }
+    formState: { errors },
+    getValues
   } = useForm({
     defaultValues: {
       email: '',
@@ -28,10 +34,6 @@ const Signup: React.FC<SignupProps> = ({ navigation }) => {
   const onSubmit = (data: FormData) =>
     firebaseCreateWithEmailAndPassword(data.email, data.password);
 
-  /**
-   * TODO:
-   * 3. validations
-   */
   return (
     <Container>
       <FormContainer>
@@ -40,7 +42,7 @@ const Signup: React.FC<SignupProps> = ({ navigation }) => {
           control={control}
           name="email"
           autoCapitalize="none"
-          rules={{ required: true }}
+          rules={emailValidation}
         />
         <Label>Password</Label>
         <InputField
@@ -48,7 +50,7 @@ const Signup: React.FC<SignupProps> = ({ navigation }) => {
           name="password"
           autoCapitalize="none"
           secureTextEntry
-          rules={{ required: true }}
+          rules={passwordValidation}
         />
         <Label>Confirm password</Label>
         <InputField
@@ -56,7 +58,7 @@ const Signup: React.FC<SignupProps> = ({ navigation }) => {
           name="confirmPassword"
           autoCapitalize="none"
           secureTextEntry
-          rules={{ required: true }}
+          rules={confirmPasswordValidation(getValues)}
         />
       </FormContainer>
       <StyledButton>

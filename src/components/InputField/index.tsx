@@ -1,5 +1,5 @@
 import React from 'react';
-import { Controller, FieldValues } from 'react-hook-form';
+import { Controller, FieldValues, RegisterOptions } from 'react-hook-form';
 import { TextInput, StyleSheet } from 'react-native';
 import { Control, Path } from 'react-hook-form';
 
@@ -17,13 +17,7 @@ const styles = StyleSheet.create({
 interface InputFieldProps<FormDataShape extends FieldValues> {
   control: Control<FormDataShape>;
   name: Path<FormDataShape>;
-  rules?: {
-    required?: boolean;
-    minLength?: number;
-    maxLength?: number;
-    pattern?: RegExp;
-    validate?: (value: unknown) => boolean | string;
-  };
+  rules?: RegisterOptions;
   secureTextEntry?: boolean;
   autoCapitalize?: 'none' | 'sentences' | 'words' | 'characters';
 }
