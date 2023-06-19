@@ -1,7 +1,7 @@
 /** @type {import('@jest/types').Config.InitialOptions} */
 module.exports = {
   rootDir: '..',
-  testMatch: ['<rootDir>/e2e/**/*.test.{js, ts, tsx}'],
+  testMatch: ['<rootDir>/e2e/**/*.test.{js,ts,tsx}'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   transform: {
     '^.+\\.(js|ts|tsx)$': 'babel-jest'
@@ -12,5 +12,6 @@ module.exports = {
   globalTeardown: 'detox/runners/jest/globalTeardown',
   reporters: ['detox/runners/jest/reporter'],
   testEnvironment: 'detox/runners/jest/testEnvironment',
+  testRunner: 'jest-circus/runner',
   verbose: true
 };
