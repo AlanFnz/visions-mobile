@@ -30,7 +30,7 @@ const Login: React.FC<LoginProps> = ({ navigation }) => {
     firebaseSignInWithEmailAndPassword(data.email, data.password);
 
   return (
-    <Container>
+    <Container testID="loginScreen">
       <FormContainer>
         <Label>Email</Label>
         <InputField

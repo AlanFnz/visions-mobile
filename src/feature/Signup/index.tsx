@@ -35,7 +35,7 @@ const Signup: React.FC<SignupProps> = ({ navigation }) => {
     firebaseCreateWithEmailAndPassword(data.email, data.password);
 
   return (
-    <Container>
+    <Container testID="signupScreen">
       <FormContainer>
         <Label>Email</Label>
         <InputField
