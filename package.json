@@ -61,7 +61,6 @@
   },
   "reactNativePermissionsIOS": [
     "Camera",
-    "MediaLibrary",
     "PhotoLibrary",
     "PhotoLibraryAddOnly"
   ],
