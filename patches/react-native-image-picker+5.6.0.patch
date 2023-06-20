@@ -1,0 +1,12 @@
+diff --git a/node_modules/react-native-image-picker/android/src/main/AndroidManifest.xml b/node_modules/react-native-image-picker/android/src/main/AndroidManifest.xml
+index 2c5911e..d07a769 100644
+--- a/node_modules/react-native-image-picker/android/src/main/AndroidManifest.xml
++++ b/node_modules/react-native-image-picker/android/src/main/AndroidManifest.xml
+@@ -1,6 +1,7 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <manifest
+   xmlns:android="http://schemas.android.com/apk/res/android"
++  package="com.mysterypulse.m1ndless"
+   >
+     <application>
+       <provider
