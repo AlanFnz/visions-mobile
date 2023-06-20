@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 import { configureStore } from '@reduxjs/toolkit';
-import authReducer from './slices/auth/auth';
+import authReducer from './slices/authSlice';
 import reactotron from '../utils/reactotron';
 
 const enhancers = [];
