@@ -25,6 +25,7 @@
     "react-native-safe-area-context": "^4.5.1",
     "react-native-screens": "^3.20.0",
     "react-native-splash-screen": "^3.3.0",
+    "react-navigation-header-buttons": "^11.0.0",
     "react-redux": "^8.0.5",
     "reactotron-react-native": "^5.0.3",
     "reactotron-redux": "^3.1.3",

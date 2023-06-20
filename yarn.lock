@@ -7485,6 +7485,13 @@ react-native@0.70.6:
     whatwg-fetch "^3.0.0"
     ws "^6.1.4"
 
+react-navigation-header-buttons@^11.0.0:
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/react-navigation-header-buttons/-/react-navigation-header-buttons-11.0.0.tgz#4d1c81e13c33b0e65a12ac1c62184331b5b5c2d2"
+  integrity sha512-1dBX7hSSLR/P0N5pPs/4azX0uHWvQsGpopzMwm9WSe/s4Q2mb1KiA/hV5uO4JC1QTLAkIk/O12OGmMu5nnFoRQ==
+  dependencies:
+    react-to-imperative "^0.2.0"
+
 react-redux@^8.0.5:
   version "8.0.5"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-8.0.5.tgz#e5fb8331993a019b8aaf2e167a93d10af469c7bd"
@@ -7518,6 +7525,11 @@ react-test-renderer@18.1.0:
     react-is "^18.1.0"
     react-shallow-renderer "^16.15.0"
     scheduler "^0.22.0"
+
+react-to-imperative@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/react-to-imperative/-/react-to-imperative-0.2.0.tgz#b5f1603a6aba352ae37b6c4ddec0759956b4c063"
+  integrity sha512-MK5hZlTkgz7yk3MZLIxoDa75d9wxAecLS6y6HPD8C/rwdv/2Zezisbs8TzEq9azkHiII9UEQJTTlSlKdiq9xsg==
 
 react@18.1.0:
   version "18.1.0"
