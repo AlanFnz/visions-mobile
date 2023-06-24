@@ -1,60 +1,76 @@
-import storage from '@react-native-firebase/storage';
+import React, { useState } from 'react';
+import { ActivityIndicator } from 'react-native';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import userImage from '../../assets/images/userImage.jpeg';
+import colors from '../../constants/colors';
 import {
-  launchImageLibrary,
-  ImagePickerResponse,
-  ImageLibraryOptions
-} from 'react-native-image-picker';
-import { Platform } from 'react-native';
-import { v4 as uuidv4 } from 'uuid';
-import { check, PERMISSIONS, RESULTS, request } from 'react-native-permissions';
+  launchImagePicker,
+  uploadImageAsync
+} from '../../utils/imagePickerHelper';
+import { firebaseUpdateSignedInUserData } from '../../services/firebase';
+import { useDispatch } from 'react-redux';
+import { updateLoggedInUserData } from '../../state/slices/authSlice';
+import { ProfileImageProps } from './ProfileImage.types';
+import {
+  ImageContainer,
+  ImageEditIconContainer,
+  LoadingContainer,
+  StyledImage
+} from './ProfileImage.styles';
 
-export const launchImagePicker = async (): Promise<string> => {
-  await checkMediaPermissions();
+const ProfileImage: React.FC<ProfileImageProps> = (props) => {
+  const dispatch = useDispatch();
 
-  return new Promise((resolve, reject) => {
-    const options: ImageLibraryOptions = {
-      mediaType: 'photo',
-      quality: 1,
-      includeBase64: false
-    };
+  const source = props.uri ? { uri: props.uri } : userImage;
 
-    launchImageLibrary(options, (response: ImagePickerResponse) => {
-      if (response.didCancel) {
-        reject('User cancelled image picker');
-      } else if (response.errorMessage) {
-        reject(`ImagePicker Error: ${response.errorMessage}`);
-      } else if (response.assets && response.assets[0].uri) {
-        resolve(response.assets[0].uri);
-      } else {
-        reject('Unknown error');
+  const [image, setImage] = useState<typeof source>(source);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const showEditButton = props.showEditButton === true;
+  const userId = props.userId;
+
+  const pickImage = async () => {
+    try {
+      const tempUri = await launchImagePicker();
+
+      if (!tempUri) return;
+
+      setIsLoading(true);
+      const uploadUrl = await uploadImageAsync(tempUri);
+      setIsLoading(false);
+
+      if (!uploadUrl) {
+        throw new Error('Could not upload image');
       }
-    });
-  });
-};
 
-export const uploadImageAsync = async (uri: string): Promise<string> => {
-  const pathFolder = 'profilePics';
-  const reference = storage().ref(`${pathFolder}/${uuidv4()}`);
+      const newData = { profilePicture: uploadUrl };
 
-  await reference.putFile(uri);
+      await firebaseUpdateSignedInUserData(userId, newData);
+      dispatch(updateLoggedInUserData({ newData }));
 
-  return reference.getDownloadURL();
-};
-
-const checkMediaPermissions = async (): Promise<void> => {
-  if (Platform.OS !== 'ios') {
-    return;
-  }
-
-  const permissionResult = await check(PERMISSIONS.IOS.PHOTO_LIBRARY);
-
-  if (permissionResult === RESULTS.DENIED) {
-    const requestResult = await request(PERMISSIONS.IOS.PHOTO_LIBRARY);
-
-    if (requestResult !== RESULTS.GRANTED) {
-      return Promise.reject('We need permission to access your photos');
+      setImage({ uri: uploadUrl });
+    } catch (error) {
+      console.log(error);
+      setIsLoading(false);
     }
-  }
+  };
 
-  return Promise.resolve();
+  return (
+    <ImageContainer onPress={showEditButton ? pickImage : undefined}>
+      {isLoading ? (
+        <LoadingContainer size={props.size}>
+          <ActivityIndicator size={'small'} color={colors.primary} />
+        </LoadingContainer>
+      ) : (
+        <StyledImage size={props.size} source={image} />
+      )}
+      {!isLoading && (
+        <ImageEditIconContainer>
+          <FontAwesome name="pencil" size={15} color="black" />
+        </ImageEditIconContainer>
+      )}
+    </ImageContainer>
+  );
 };
+
+export default ProfileImage;
