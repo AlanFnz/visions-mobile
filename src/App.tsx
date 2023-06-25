@@ -6,7 +6,7 @@ import Signup from './feature/Signup';
 import Login from './feature/Login';
 import TabNavigator from './components/TabNavigator';
 
-import { checkUserAuthentication } from './state/slices/auth/auth';
+import { checkUserAuthentication } from './state/slices/authSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from './state/store';
 
