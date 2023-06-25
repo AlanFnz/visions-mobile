@@ -1,4 +1,8 @@
 import auth from '@react-native-firebase/auth';
+import database, {
+  FirebaseDatabaseTypes
+} from '@react-native-firebase/database';
+import { UserData } from '../../types/user.types';
 
 /**
  * @param email
@@ -44,4 +48,43 @@ export {
   firebaseCreateWithEmailAndPassword,
   firebaseSignInWithEmailAndPassword,
   firebaseSignOut
+};
+
+export const firebaseUpdateSignedInUserData = async (
+  userId: string,
+  newData: UserData
+): Promise<void> => {
+  if (newData.firstName && newData.lastName) {
+    const firstLast = `${newData.firstName} ${newData.lastName}`.toLowerCase();
+    newData.firstLast = firstLast;
+  }
+
+  const userRef: FirebaseDatabaseTypes.Reference = database().ref(
+    `users/${userId}`
+  );
+
+  await userRef.update(newData);
+};
+
+export const firebaseCreateUser = async (
+  firstName: string,
+  lastName: string,
+  email: string,
+  userId: string
+): Promise<UserData> => {
+  const firstLast = `${firstName} ${lastName}`.toLowerCase();
+  const userData: UserData = {
+    firstName,
+    lastName,
+    firstLast,
+    email,
+    userId,
+    signUpDate: new Date().toISOString()
+  };
+
+  const userRef = database().ref(`users/${userId}`);
+
+  await userRef.set(userData);
+
+  return userData;
 };
