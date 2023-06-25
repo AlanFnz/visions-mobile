@@ -1,19 +1,11 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import auth from '@react-native-firebase/auth';
-
-interface User {
-  uid: string;
-  email: string | null;
-}
-
-interface AuthState {
-  isLoggedIn: boolean;
-  user: User | null;
-}
+import { AuthState, UserData } from '../../../types/user.types';
 
 const initialState: AuthState = {
-  isLoggedIn: false,
-  user: null
+  token: null,
+  userData: null,
+  didTryAutoLogin: false
 };
 
 export const checkUserAuthentication = createAsyncThunk(
@@ -21,10 +13,13 @@ export const checkUserAuthentication = createAsyncThunk(
   async (_, { dispatch }) => {
     auth().onAuthStateChanged((user) => {
       if (user) {
-        const userData = { uid: user.uid, email: user.email };
-        dispatch(loginAction(userData));
+        const userData: Partial<UserData> = {
+          uid: user.uid,
+          email: user.email
+        };
+        dispatch(authenticate({ token: 'dummy_token', userData }));
       } else {
-        dispatch(logoutAction());
+        dispatch(logout());
       }
     });
   }
@@ -34,17 +29,37 @@ const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    loginAction(state, action: PayloadAction<User>) {
-      state.isLoggedIn = true;
-      state.user = action.payload;
+    authenticate: (
+      state,
+      action: PayloadAction<{ token: string; userData: Partial<UserData> }>
+    ) => {
+      state.token = action.payload.token;
+      state.userData = action.payload.userData;
+      state.didTryAutoLogin = true;
     },
-    logoutAction(state) {
-      state.isLoggedIn = false;
-      state.user = null;
+    setDidTryAutoLogin: (state) => {
+      state.didTryAutoLogin = true;
+    },
+    logout: (state) => {
+      state.token = null;
+      state.userData = null;
+      state.didTryAutoLogin = false;
+    },
+    updateLoggedInUserData: (
+      state,
+      action: PayloadAction<{ newData: Partial<UserData> }>
+    ) => {
+      if (state.userData) {
+        state.userData = { ...state.userData, ...action.payload.newData };
+      }
     }
   }
 });
 
-const { actions, reducer } = authSlice;
-export const { loginAction, logoutAction } = actions;
-export default reducer;
+export const {
+  authenticate,
+  setDidTryAutoLogin,
+  logout,
+  updateLoggedInUserData
+} = authSlice.actions;
+export default authSlice.reducer;
