@@ -1,4 +1,4 @@
-package com.mysterypulse.m1ndless.newarchitecture.components;
+package com.mysterypulse.visions.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

@@ -35,12 +35,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.mysterypulse.m1ndless",
+    package = "com.mysterypulse.visions",
 )
 
 android_resource(
     name = "res",
-    package = "com.mysterypulse.m1ndless",
+    package = "com.mysterypulse.visions",
     res = "src/main/res",
 )
 

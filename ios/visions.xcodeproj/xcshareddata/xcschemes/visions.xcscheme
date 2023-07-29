@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "m1ndless.app"
-               BlueprintName = "m1ndless"
-               ReferencedContainer = "container:m1ndless.xcodeproj">
+               BuildableName = "visions.app"
+               BlueprintName = "visions"
+               ReferencedContainer = "container:visions.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "m1ndlessTests.xctest"
-               BlueprintName = "m1ndlessTests"
-               ReferencedContainer = "container:m1ndless.xcodeproj">
+               BuildableName = "visionsTests.xctest"
+               BlueprintName = "visionsTests"
+               ReferencedContainer = "container:visions.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "m1ndless.app"
-            BlueprintName = "m1ndless"
-            ReferencedContainer = "container:m1ndless.xcodeproj">
+            BuildableName = "visions.app"
+            BlueprintName = "visions"
+            ReferencedContainer = "container:visions.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "m1ndless.app"
-            BlueprintName = "m1ndless"
-            ReferencedContainer = "container:m1ndless.xcodeproj">
+            BuildableName = "visions.app"
+            BlueprintName = "visions"
+            ReferencedContainer = "container:visions.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

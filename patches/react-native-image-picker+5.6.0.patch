@@ -6,7 +6,7 @@ index 2c5911e..d07a769 100644
  <?xml version="1.0" encoding="utf-8"?>
  <manifest
    xmlns:android="http://schemas.android.com/apk/res/android"
-+  package="com.mysterypulse.m1ndless"
++  package="com.mysterypulse.visions"
    >
      <application>
        <provider

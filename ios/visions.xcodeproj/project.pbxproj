@@ -12,9 +12,9 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		19B833D929D7C40F00E14CE2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19B833D829D7C40F00E14CE2 /* GoogleService-Info.plist */; };
-		5FE0F78353031B3AA5A365AE /* Pods_m1ndless.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D74795A6AA7CAF76552BE8 /* Pods_m1ndless.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		B1778FEE145F11F00634544B /* Pods_m1ndless_m1ndlessTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 580CB04C76D36A2EB672E529 /* Pods_m1ndless_m1ndlessTests.framework */; };
+		9667EF6E8299D6E922B92441 /* Pods_visions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F229176545B1346D0813F46F /* Pods_visions.framework */; };
+		F426DC2893F13BE1C245AE28 /* Pods_visions_visionsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BCF4A58CDD9A602D46A2F82 /* Pods_visions_visionsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,24 +28,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* m1ndlessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = m1ndlessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* visionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = visionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* m1ndlessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = m1ndlessTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* m1ndless.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = m1ndless.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* visions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = visions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = m1ndless/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = m1ndless/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = m1ndless/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = m1ndless/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = m1ndless/main.m; sourceTree = "<group>"; };
+		1979F1A4519613145AB0A184 /* Pods-visions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-visions.debug.xcconfig"; path = "Target Support Files/Pods-visions/Pods-visions.debug.xcconfig"; sourceTree = "<group>"; };
 		19B833D829D7C40F00E14CE2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2BCF4A58CDD9A602D46A2F82 /* Pods_visions_visionsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_visions_visionsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D69E68526EFF1F0EEA8A57B /* Pods-visions-visionsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-visions-visionsTests.debug.xcconfig"; path = "Target Support Files/Pods-visions-visionsTests/Pods-visions-visionsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-m1ndless.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-m1ndless.debug.xcconfig"; path = "Target Support Files/Pods-m1ndless/Pods-m1ndless.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-m1ndless.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-m1ndless.release.xcconfig"; path = "Target Support Files/Pods-m1ndless/Pods-m1ndless.release.xcconfig"; sourceTree = "<group>"; };
-		580CB04C76D36A2EB672E529 /* Pods_m1ndless_m1ndlessTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_m1ndless_m1ndlessTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B7EB9410499542E8C5724F5 /* Pods-m1ndless-m1ndlessTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-m1ndless-m1ndlessTests.debug.xcconfig"; path = "Target Support Files/Pods-m1ndless-m1ndlessTests/Pods-m1ndless-m1ndlessTests.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = m1ndless/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-m1ndless-m1ndlessTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-m1ndless-m1ndlessTests.release.xcconfig"; path = "Target Support Files/Pods-m1ndless-m1ndlessTests/Pods-m1ndless-m1ndlessTests.release.xcconfig"; sourceTree = "<group>"; };
-		B2D74795A6AA7CAF76552BE8 /* Pods_m1ndless.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_m1ndless.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBC5A5F418B1BB418ECA9096 /* Pods-visions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-visions.release.xcconfig"; path = "Target Support Files/Pods-visions/Pods-visions.release.xcconfig"; sourceTree = "<group>"; };
+		DF9B29D9099DE1EE4C5BB759 /* Pods-visions-visionsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-visions-visionsTests.release.xcconfig"; path = "Target Support Files/Pods-visions-visionsTests/Pods-visions-visionsTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F229176545B1346D0813F46F /* Pods_visions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_visions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1778FEE145F11F00634544B /* Pods_m1ndless_m1ndlessTests.framework in Frameworks */,
+				F426DC2893F13BE1C245AE28 /* Pods_visions_visionsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FE0F78353031B3AA5A365AE /* Pods_m1ndless.framework in Frameworks */,
+				9667EF6E8299D6E922B92441 /* Pods_visions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,8 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				B2D74795A6AA7CAF76552BE8 /* Pods_m1ndless.framework */,
-				580CB04C76D36A2EB672E529 /* Pods_m1ndless_m1ndlessTests.framework */,
+				F229176545B1346D0813F46F /* Pods_visions.framework */,
+				2BCF4A58CDD9A602D46A2F82 /* Pods_visions_visionsTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -134,8 +138,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* m1ndless.app */,
-				00E356EE1AD99517003FC87E /* m1ndlessTests.xctest */,
+				13B07F961A680F5B00A75B9A /* visions.app */,
+				00E356EE1AD99517003FC87E /* visionsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +151,10 @@
 				5709B34CF0A7D63546082F79 /* Pods-m1ndless.release.xcconfig */,
 				5B7EB9410499542E8C5724F5 /* Pods-m1ndless-m1ndlessTests.debug.xcconfig */,
 				89C6BE57DB24E9ADA2F236DE /* Pods-m1ndless-m1ndlessTests.release.xcconfig */,
+				1979F1A4519613145AB0A184 /* Pods-visions.debug.xcconfig */,
+				CBC5A5F418B1BB418ECA9096 /* Pods-visions.release.xcconfig */,
+				2D69E68526EFF1F0EEA8A57B /* Pods-visions-visionsTests.debug.xcconfig */,
+				DF9B29D9099DE1EE4C5BB759 /* Pods-visions-visionsTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -154,9 +162,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* m1ndlessTests */ = {
+		00E356ED1AD99517003FC87E /* visionsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "m1ndlessTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "visionsTests" */;
 			buildPhases = (
 				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -170,14 +178,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = m1ndlessTests;
+			name = visionsTests;
 			productName = m1ndlessTests;
-			productReference = 00E356EE1AD99517003FC87E /* m1ndlessTests.xctest */;
+			productReference = 00E356EE1AD99517003FC87E /* visionsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* m1ndless */ = {
+		13B07F861A680F5B00A75B9A /* visions */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "m1ndless" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "visions" */;
 			buildPhases = (
 				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -193,9 +201,9 @@
 			);
 			dependencies = (
 			);
-			name = m1ndless;
+			name = visions;
 			productName = m1ndless;
-			productReference = 13B07F961A680F5B00A75B9A /* m1ndless.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* visions.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -215,7 +223,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "m1ndless" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "visions" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -228,8 +236,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* m1ndless */,
-				00E356ED1AD99517003FC87E /* m1ndlessTests */,
+				13B07F861A680F5B00A75B9A /* visions */,
+				00E356ED1AD99517003FC87E /* visionsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -277,15 +285,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-m1ndless/Pods-m1ndless-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-visions/Pods-visions-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-m1ndless/Pods-m1ndless-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-visions/Pods-visions-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-m1ndless/Pods-m1ndless-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-visions/Pods-visions-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8E945C7EC2D9F8105E4D5513 /* [CP-User] [RNFB] Core Configuration */ = {
@@ -316,7 +324,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-m1ndless-m1ndlessTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-visions-visionsTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -338,7 +346,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-m1ndless-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-visions-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -351,15 +359,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-m1ndless-m1ndlessTests/Pods-m1ndless-m1ndlessTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-visions-visionsTests/Pods-visions-visionsTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-m1ndless-m1ndlessTests/Pods-m1ndless-m1ndlessTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-visions-visionsTests/Pods-visions-visionsTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-m1ndless-m1ndlessTests/Pods-m1ndless-m1ndlessTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-visions-visionsTests/Pods-visions-visionsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
@@ -368,15 +376,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-m1ndless/Pods-m1ndless-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-visions/Pods-visions-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-m1ndless/Pods-m1ndless-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-visions/Pods-visions-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-m1ndless/Pods-m1ndless-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-visions/Pods-visions-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
@@ -385,15 +393,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-m1ndless-m1ndlessTests/Pods-m1ndless-m1ndlessTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-visions-visionsTests/Pods-visions-visionsTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-m1ndless-m1ndlessTests/Pods-m1ndless-m1ndlessTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-visions-visionsTests/Pods-visions-visionsTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-m1ndless-m1ndlessTests/Pods-m1ndless-m1ndlessTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-visions-visionsTests/Pods-visions-visionsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -440,7 +448,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* m1ndless */;
+			target = 13B07F861A680F5B00A75B9A /* visions */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -448,7 +456,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-m1ndless-m1ndlessTests.debug.xcconfig */;
+			baseConfigurationReference = 2D69E68526EFF1F0EEA8A57B /* Pods-visions-visionsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -469,13 +477,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/m1ndless.app/m1ndless";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/visions.app/visions";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-m1ndless-m1ndlessTests.release.xcconfig */;
+			baseConfigurationReference = DF9B29D9099DE1EE4C5BB759 /* Pods-visions-visionsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -493,13 +501,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/m1ndless.app/m1ndless";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/visions.app/visions";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-m1ndless.debug.xcconfig */;
+			baseConfigurationReference = 1979F1A4519613145AB0A184 /* Pods-visions.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -516,7 +524,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = m1ndless;
+				PRODUCT_NAME = visions;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -526,7 +534,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-m1ndless.release.xcconfig */;
+			baseConfigurationReference = CBC5A5F418B1BB418ECA9096 /* Pods-visions.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -542,7 +550,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = m1ndless;
+				PRODUCT_NAME = visions;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -689,7 +697,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "m1ndlessTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "visionsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -698,7 +706,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "m1ndless" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "visions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -707,7 +715,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "m1ndless" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "visions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

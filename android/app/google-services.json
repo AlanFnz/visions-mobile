@@ -1,15 +1,15 @@
 {
   "project_info": {
     "project_number": "203163730818",
-    "project_id": "m1ndless",
-    "storage_bucket": "m1ndless.appspot.com"
+    "project_id": "visions",
+    "storage_bucket": "visions.appspot.com"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:203163730818:android:6581d47ce4b94cd833059b",
         "android_client_info": {
-          "package_name": "com.mysterypulse.m1ndless"
+          "package_name": "com.mysterypulse.visions"
         }
       },
       "oauth_client": [

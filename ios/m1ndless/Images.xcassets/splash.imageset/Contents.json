@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "m1ndless.png",
+      "filename" : "visions.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "m1ndless@2x.png",
+      "filename" : "visions@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "m1ndless@3x.png",
+      "filename" : "visions@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

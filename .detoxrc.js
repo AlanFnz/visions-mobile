@@ -13,16 +13,16 @@ module.exports = {
   apps: {
     'ios.debug': {
       type: 'ios.app',
-      binaryPath: 'ios/build/Build/Products/Debug-iphonesimulator/m1ndless.app',
+      binaryPath: 'ios/build/Build/Products/Debug-iphonesimulator/visions.app',
       build:
-        'xcodebuild -workspace ios/m1ndless.xcworkspace -scheme m1ndless -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build'
+        'xcodebuild -workspace ios/visions.xcworkspace -scheme visions -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build'
     },
     'ios.release': {
       type: 'ios.app',
       binaryPath:
-        'ios/build/Build/Products/Release-iphonesimulator/m1ndless.app',
+        'ios/build/Build/Products/Release-iphonesimulator/visions.app',
       build:
-        'xcodebuild -workspace ios/m1ndless.xcworkspace -scheme m1ndless -configuration Release -sdk iphonesimulator -derivedDataPath ios/build'
+        'xcodebuild -workspace ios/visions.xcworkspace -scheme visions -configuration Release -sdk iphonesimulator -derivedDataPath ios/build'
     },
     'android.debug': {
       type: 'android.apk',

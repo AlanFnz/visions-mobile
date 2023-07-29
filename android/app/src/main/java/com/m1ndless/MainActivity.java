@@ -1,4 +1,4 @@
-package com.mysterypulse.m1ndless;
+package com.mysterypulse.visions;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -15,7 +15,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "m1ndless";
+    return "visions";
   }
 
   @Override
