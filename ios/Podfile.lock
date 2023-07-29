@@ -65,6 +65,14 @@ PODS:
   - hermes-engine (0.70.6)
   - leveldb-library (1.22.2)
   - libevent (2.1.12)
+  - Permission-Camera (3.8.0):
+    - RNPermissions
+  - Permission-MediaLibrary (3.8.0):
+    - RNPermissions
+  - Permission-PhotoLibrary (3.8.0):
+    - RNPermissions
+  - Permission-PhotoLibraryAddOnly (3.8.0):
+    - RNPermissions
   - PromisesObjC (2.2.0)
   - RCT-Folly (2021.07.22.00):
     - boost
@@ -402,6 +410,10 @@ DEPENDENCIES:
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - hermes-engine (from `../node_modules/react-native/sdks/hermes/hermes-engine.podspec`)
   - libevent (~> 2.1.12)
+  - Permission-Camera (from `../node_modules/react-native-permissions/ios/Camera`)
+  - Permission-MediaLibrary (from `../node_modules/react-native-permissions/ios/MediaLibrary`)
+  - Permission-PhotoLibrary (from `../node_modules/react-native-permissions/ios/PhotoLibrary`)
+  - Permission-PhotoLibraryAddOnly (from `../node_modules/react-native-permissions/ios/PhotoLibraryAddOnly`)
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
@@ -474,6 +486,14 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
   hermes-engine:
     :podspec: "../node_modules/react-native/sdks/hermes/hermes-engine.podspec"
+  Permission-Camera:
+    :path: "../node_modules/react-native-permissions/ios/Camera"
+  Permission-MediaLibrary:
+    :path: "../node_modules/react-native-permissions/ios/MediaLibrary"
+  Permission-PhotoLibrary:
+    :path: "../node_modules/react-native-permissions/ios/PhotoLibrary"
+  Permission-PhotoLibraryAddOnly:
+    :path: "../node_modules/react-native-permissions/ios/PhotoLibraryAddOnly"
   RCT-Folly:
     :podspec: "../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec"
   RCTRequired:
@@ -574,6 +594,10 @@ SPEC CHECKSUMS:
   hermes-engine: 2af7b7a59128f250adfd86f15aa1d5a2ecd39995
   leveldb-library: f03246171cce0484482ec291f88b6d563699ee06
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
+  Permission-Camera: e6d142d7d8b714afe0a83e5e6ae17eb949f1e3e9
+  Permission-MediaLibrary: 6a5888dd77669b568716bea80c21340aaab74c51
+  Permission-PhotoLibrary: 31787bbe77d0d3ae6a5267b8435e4a2e9ef78f1d
+  Permission-PhotoLibraryAddOnly: 16c92ad62b802514f3f788e00b298080be996337
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
   RCT-Folly: 0080d0a6ebf2577475bda044aa59e2ca1f909cda
   RCTRequired: e1866f61af7049eb3d8e08e8b133abd38bc1ca7a
@@ -615,6 +639,6 @@ SPEC CHECKSUMS:
   RNVectorIcons: fcc2f6cb32f5735b586e66d14103a74ce6ad61f8
   Yoga: 99caf8d5ab45e9d637ee6e0174ec16fbbb01bcfc
 
-PODFILE CHECKSUM: e216ca903e330487e34791e33cf8c656048d67f9
+PODFILE CHECKSUM: cb67311b4fb4869dbc0074802b6c736eaa82b7b7
 
 COCOAPODS: 1.11.3
