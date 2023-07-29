@@ -16,4 +16,5 @@ export type AuthState = {
   token: string | null;
   userData: UserData | null;
   didTryAutoLogin: boolean;
+  isLoggedIn: boolean;
 };

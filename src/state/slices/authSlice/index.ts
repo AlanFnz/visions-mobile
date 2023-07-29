@@ -5,7 +5,8 @@ import { AuthState, UserData } from '../../../types/user.types';
 const initialState: AuthState = {
   token: null,
   userData: null,
-  didTryAutoLogin: false
+  didTryAutoLogin: false,
+  isLoggedIn: false
 };
 
 export const checkUserAuthentication = createAsyncThunk(
@@ -36,6 +37,7 @@ const authSlice = createSlice({
       state.token = action.payload.token;
       state.userData = action.payload.userData;
       state.didTryAutoLogin = true;
+      state.isLoggedIn = true;
     },
     setDidTryAutoLogin: (state) => {
       state.didTryAutoLogin = true;
@@ -44,6 +46,7 @@ const authSlice = createSlice({
       state.token = null;
       state.userData = null;
       state.didTryAutoLogin = false;
+      state.isLoggedIn = false;
     },
     updateLoggedInUserData: (
       state,
